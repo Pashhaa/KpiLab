@@ -13,7 +13,8 @@ public class CashMachine {
     private List<Integer> prices = new ArrayList<>();
 
 
-    public void start() {
+    public void start() 
+    {
         Scanner sc = new Scanner(System.in);
         System.out.println("1.Розпочати роботу");
         int scan = sc.nextInt();
@@ -23,14 +24,16 @@ public class CashMachine {
             System.out.println("2.Перейти до оплати");
 
             scan = sc.nextInt();
-            switch (scan) {
+            switch (scan) 
+            {
                 case 1:
 
                     addware();
                     break;
 
                 case 2:
-                    if (this.wares.isEmpty()) {
+                    if (this.wares.isEmpty()) 
+                    {
                         System.out.println("В кошику выдсутні товари");
                     } else {
                         pay();
@@ -45,7 +48,8 @@ public class CashMachine {
     }
 
 
-    private void pay() {
+    private void pay() 
+    {
         System.out.println(wares);
         total = 0;
         for (int price : prices) {
